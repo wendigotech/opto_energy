@@ -5,8 +5,8 @@
     </div>
     <div class="container mx-auto px-5 pt-10 pb-10 text-light">
         <h2 class="font-bold fw-bold h3 mb-5 text-center text-lg text-white"><?php echo PG_Blocks_v3::getAttribute( $args, 'form_title' ) ?></h2>
-            <form <?php if(!empty($_GET['context']) && $_GET['context'] === 'edit') echo 'data-wp-inner-blocks'; ?>>
+            <div class="container" data-empty-placeholder <?php if(!empty($_GET['context']) && $_GET['context'] === 'edit') echo 'data-wp-inner-blocks'; ?>>
             <?php if(empty($_GET['context']) || $_GET['context'] !== 'edit') echo PG_Blocks_v3::getInnerContent( $args ); ?>
-        </form>
+        </div>
     </div>
 </section>

@@ -18,5 +18,5 @@
 'footer_link' => array('post_id' => 0, 'url' => '#', 'post_type' => '', 'title' => '')
             ),
             'dynamic' => true,
-            'version' => '1.0.262'
+            'version' => '1.0.266'
         ) );
