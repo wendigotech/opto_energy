@@ -5,7 +5,7 @@
                 <p class="mb-3"><?php echo PG_Blocks_v3::getAttribute( $args, 'description' ) ?></p> 
             </div>             
             <div class="py-3 text-start"> 
-                <h4 class="fw-bold h5 mb-4 text-info text-uppercase"><?php echo PG_Blocks_v3::getAttribute( $args, 'about_us_heading' ) ?></h4> 
+                <h4 class="fw-bold h5 mb-4 text-center text-info text-uppercase"><?php echo PG_Blocks_v3::getAttribute( $args, 'about_us_heading' ) ?></h4> 
                     <ul class="d-flex justify-content-evenly list-unstyled" <?php if(!empty($_GET['context']) && $_GET['context'] === 'edit') echo 'data-wp-inner-blocks'; ?>>
                     <?php if(empty($_GET['context']) || $_GET['context'] !== 'edit') echo PG_Blocks_v3::getInnerContent( $args ); ?>
                 </ul>                 

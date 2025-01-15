@@ -1,4 +1,5 @@
 
+            </div>
         </main>
         <footer class="bg-primary pt-5 text-white"> 
             <div class="container pb-4 pt-4"> 

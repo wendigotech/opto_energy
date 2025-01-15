@@ -56,5 +56,5 @@
             ),
             'dynamic' => true,
             'has_inner_blocks' => true,
-            'version' => '1.0.266'
+            'version' => '1.0.269'
         ) );
