@@ -45,7 +45,7 @@
             
             
             return el(Fragment, {}, [
-                el('li', { ...blockProps }, [' ', ' ', props.attributes.footer_link && props.attributes.footer_link.url && el('a', { href: props.attributes.footer_link.url, className: 'link-light', onClick: function(e) { e.preventDefault(); } }, 'Unsere Geschichte'), ' ', ' ']),                        
+                el('li', { ...blockProps }, [' ', props.attributes.footer_link && props.attributes.footer_link.url && el('a', { href: props.attributes.footer_link.url, className: 'link-light', onClick: function(e) { e.preventDefault(); } }, 'Unsere Geschichte'), ' ', ' ']),                        
                 
                     el( InspectorControls, {},
                         [

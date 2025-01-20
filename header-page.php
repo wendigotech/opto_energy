@@ -28,8 +28,7 @@
                                 </li>
                                 <li class="nav-item"> <a class="nav-link p-lg-4" href="#"><?php _e( 'Registrieren', 'opto_energy' ); ?></a> 
                                 </li>                                 
-                                <li class="nav-item">
-                                    <a class="nav-link p-lg-4" href="#"><?php _e( 'Kontakt', 'opto_energy' ); ?></a> 
+                                <li class="nav-item"><a class="nav-link p-lg-4" href="#"><?php _e( 'Kontakt', 'opto_energy' ); ?></a> 
                                 </li>                                 
                             </ul>
                         </div>

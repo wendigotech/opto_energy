@@ -211,26 +211,12 @@
                 </div>
             </div>
         </section>
-        <section class="position-relative py-5 recent-event-section" data-pg-ia-scene='{"s":"onEnter","l":[{"t":".floating-title","a":{"l":[{"t":"","l":[{"t":"tween","p":0,"d":1,"l":{"y":"-50vh"}}]}]}},{"t":".event-link","a":{"l":[{"t":"","l":[{"t":"set","p":0,"d":0,"l":{"autoAlpha":0},"e":"Power1.easeOut"},{"t":"tween","p":0,"d":1,"s":0.25,"l":{"autoAlpha":1},"e":"Power1.easeOut"}]}]},"p":"time","s":"20"}],"dir":"v"}' id="news" title="Aktuelles">
+        <section class="position-relative py-5 recent-event-section" data-pg-ia-scene='{"s":"onEnter","l":[{"t":".floating-title","a":{"l":[{"t":"","l":[{"t":"tween","p":0,"d":1,"l":{"y":"-50vh"}}]}]}},{"t":".event-link","a":{"l":[{"t":"","l":[{"t":"set","p":0,"d":0,"l":{"autoAlpha":0},"e":"Power1.easeOut"},{"t":"tween","p":0,"d":1,"s":0.25,"l":{"autoAlpha":1},"e":"Power1.easeOut"}]}]},"p":"time","s":"20"}],"dir":"v"}' id="news">
             <h2 class="floating-title"><?php echo PG_Blocks_v3::getAttribute( $args, 'recent_events_title' ) ?></h2>
-            <div class="container py-5">
-                <div class="gy-3 row">
-                    <div class="col-lg-6">
-                        <a href="#" class="d-block event-link px-4" data-pg-ia-hide> <img src="https://images.unsplash.com/photo-1441171205449-f600f908a9f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDQ4OHx8ZW5lcmd5fGVufDB8fHx8MTczMzc4NTA1Nnww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid mb-4" alt="Opto Energy Solar Panel"/> <h3 class="h4"><?php _e( 'Opto Energy - Effiziente Lösungen für eine nachhaltige Zukunft', 'opto_energy' ); ?></h3> </a>
-                    </div>
-                    <div class="col-lg-6 pt-lg-5">
-                        <a href="#" class="d-block event-link px-4" data-pg-ia-hide> <img src="https://images.unsplash.com/photo-1649441249380-2035c4ee9061?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDExfHxzb2xhciUyMHBhbmVsfGVufDB8fHx8MTczMzY5NDI0MXww&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" class="img-fluid mb-4" alt="Opto Energy Solar Panel"/> <h3 class="h4"><?php _e( 'Energieeffiziente Lösungen - Entdecken Sie Unsere Produkte', 'opto_energy' ); ?></h3> </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a href="#" class="d-block event-link px-4" data-pg-ia-hide> <img src="https://images.unsplash.com/photo-1606707724632-eff3d909ab7b?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDN8fHNvbGFycGFuZWx8ZW58MHx8fHwxNzMzNzgyODI4fDA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" class="img-fluid mb-4" alt="Solar Panel"/> <h3 class="h4"><?php _e( 'Energieeffiziente Lösungen für Ihr Zuhause', 'opto_energy' ); ?></h3> </a>
-                    </div>
-                    <div class="col-lg-6 pt-lg-5">
-                        <a href="#" class="d-block event-link px-4" data-pg-ia-hide> <img src="https://images.unsplash.com/photo-1446776899648-aa78eefe8ed0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDQ4NHx8ZW5lcmd5fGVufDB8fHx8MTczMzc4NTA1Nnww&ixlib=rb-4.0.3&q=80&w=1080" class="img-fluid mb-4" alt="Opto Energy Solar Panels"/> <h3 class="h4"><?php _e( 'Energieeffizienz bei Opto Energy', 'opto_energy' ); ?></h3> </a>
-                    </div>
-                </div>
-                <div class="mt-4 text-center">
-                    <a href="<?php echo (!empty($_GET['context']) && $_GET['context'] === 'edit') ? 'javascript:void()' : PG_Blocks_v3::getLinkUrl( $args, 'view_all_button_link' ) ?>" class="btn btn-lg btn-primary see-more"><?php echo PG_Blocks_v3::getAttribute( $args, 'view_all_button_label' ) ?></a>
-                </div>
+                <div class="container py-5" <?php if(!empty($_GET['context']) && $_GET['context'] === 'edit') echo 'data-wp-inner-blocks'; ?>>
+                <?php if(empty($_GET['context']) || $_GET['context'] !== 'edit') echo PG_Blocks_v3::getInnerContent( $args ); ?>
+            </div>
+            <div class="mt-4 text-center"><a href="<?php echo (!empty($_GET['context']) && $_GET['context'] === 'edit') ? 'javascript:void()' : PG_Blocks_v3::getLinkUrl( $args, 'view_all_button_link' ) ?>" class="btn btn-lg btn-primary see-more"><?php echo PG_Blocks_v3::getAttribute( $args, 'view_all_button_label' ) ?></a>
             </div>
         </section>
     </section>
